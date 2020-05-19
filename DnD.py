@@ -21,9 +21,8 @@ def loadClass():
     # Opening JSON file
     try:
         f = open('PlayerClass.json',)
-    except IOError:
-        print("Error: can't find file or read data")
-    
+    except IOError as err:
+        print("Error: ", err)
     # returns JSON object as a dictionary
     data = json.load(f)
     global playerClass
@@ -38,8 +37,8 @@ def loadRace():
     # Opening JSON file
     try:
         f = open('Race.json',)
-    except IOError:
-        print("Error: can't find file or read data")
+    except IOError as err:
+        print("Error: ", err)
     # returns JSON object as a dictionary
     data = json.load(f)
     global Race
@@ -55,8 +54,8 @@ def loadWeapon():
     # Opening JSON file
     try:
         f = open('weapon.json',)
-    except IOError:
-        print("Error: can't find file or read data")
+    except IOError as err:
+        print("Error: ", err)
     
     # returns JSON object as a dictionary
     data = json.load(f)
@@ -71,8 +70,8 @@ def loadGear():
     # Opening JSON file
     try:
         f = open('gear.json',)
-    except IOError:
-        print("Error: can't find file or read data")
+    except IOError as err:
+        print("Error: ", err)
     
     # returns JSON object as a dictionary
     data = json.load(f)
@@ -87,8 +86,8 @@ def loadBarbarian():
     # Opening JSON file
     try:
         f = open('barbarian.json',)
-    except IOError:
-        print("Error: can't find file or read data")
+    except IOError as err:
+        print("Error: ", err)
     
     # returns JSON object as a dictionary
     data = json.load(f)
