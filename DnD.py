@@ -103,8 +103,8 @@ def loadBard():
     # Opening JSON file
     try:
         f = open('bard.json',)
-    except IOError:
-        print("Error: can't find file or read data")
+    except IOError as err:
+        print("Error: ",err)
     
     # returns JSON object as a dictionary
     data = json.load(f)
