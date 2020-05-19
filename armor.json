@@ -1,0 +1,160 @@
+{
+    "armor_details":[
+ {
+   "ID": 1,
+   "typeArmor": "Light",
+   "Armor": "Padded",
+   "Cost": 5,
+   "AC": "11 +dex",
+   "strength": 0,
+   "stealth": true,
+   "weight": 8,
+   "don": 60,
+   "doff": 60
+ },
+ {
+   "ID": 2,
+   "typeArmor": "Light",
+   "Armor": "Leather",
+   "Cost": 10,
+   "AC": "11 +dex",
+   "strength": 0,
+   "stealth": false,
+   "weight": 10,
+   "don": 60,
+   "doff": 60
+ },
+ {
+   "ID": 3,
+   "typeArmor": "Light",
+   "Armor": "Studded Leather",
+   "Cost": 45,
+   "AC": "12 +dex",
+   "strength": 0,
+   "stealth": false,
+   "weight": 13,
+   "don": 60,
+   "doff": 60
+ },
+ {
+   "ID": 4,
+   "typeArmor": "Medium",
+   "Armor": "Hide",
+   "Cost": 10,
+   "AC": "12 +dex (2)",
+   "strength": null,
+   "stealth": false,
+   "weight": 12,
+   "don": 300,
+   "doff": 60
+ },
+ {
+   "ID": 5,
+   "typeArmor": "Medium",
+   "Armor": "Chain Shirt",
+   "Cost": 50,
+   "AC": "13 +dex (2)",
+   "strength": null,
+   "stealth": false,
+   "weight": 20,
+   "don": 300,
+   "doff": 60
+ },
+ {
+   "ID": 6,
+   "typeArmor": "Medium",
+   "Armor": "Scale",
+   "Cost": 50,
+   "AC": "14 +dex (2)",
+   "strength": null,
+   "stealth": true,
+   "weight": 45,
+   "don": 300,
+   "doff": 60
+ },
+ {
+   "ID": 7,
+   "typeArmor": "Medium",
+   "Armor": "Breast Plate",
+   "Cost": 400,
+   "AC": "14 +dex (2)",
+   "strength": null,
+   "stealth": false,
+   "weight": 20,
+   "don": 300,
+   "doff": 60
+ },
+ {
+   "ID": 8,
+   "typeArmor": "Medium",
+   "Armor": "Half Plate",
+   "Cost": 750,
+   "AC": "15 +dex (2)",
+   "strength": null,
+   "stealth": true,
+   "weight": 40,
+   "don": 300,
+   "doff": 60
+ },
+ {
+   "ID": 9,
+   "typeArmor": "Heavy",
+   "Armor": "Ring",
+   "Cost": 30,
+   "AC": "14",
+   "strength": null,
+   "stealth": true,
+   "weight": 40,
+   "don": 600,
+   "doff": 300
+ },
+ {
+   "ID": 10,
+   "typeArmor": "Heavy",
+   "Armor": "Chain",
+   "Cost": 75,
+   "AC": "16",
+   "strength": 13,
+   "stealth": true,
+   "weight": 55,
+   "don": 600,
+   "doff": 300
+ },
+ {
+   "ID": 11,
+   "typeArmor": "Heavy",
+   "Armor": "Splint",
+   "Cost": 200,
+   "AC": "17",
+   "strength": 15,
+   "stealth": true,
+   "weight": 60,
+   "don": 600,
+   "doff": 300
+ },
+ {
+   "ID": 12,
+   "typeArmor": "Heavy",
+   "Armor": "Plate",
+   "Cost": 1500,
+   "AC": "17",
+   "strength": 15,
+   "stealth": true,
+   "weight": 65,
+   "don": 600,
+   "doff": 300
+ },
+ {
+   "ID": 13,
+   "typeArmor": "Shield",
+   "Armor": "Shield",
+   "Cost": 10,
+   "AC": "+2",
+   "strength": null,
+   "stealth": false,
+   "weight": 6,
+   "don": 5,
+   "doff": 5
+ }
+]
+}

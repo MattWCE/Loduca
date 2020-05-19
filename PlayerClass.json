@@ -1,0 +1,78 @@
+{"player_class_details":[
+    {
+       
+        "player_class": "Barbarian",
+        "hit dice": 12,
+        "starting_wealth":"2 d 4 * 10 g.p."
+    },
+    {
+        
+        "player_class": "Bard",
+        "hit dice": 8,
+        "starting_wealth": "5 d 4 * 10 g.p."
+    },
+    {
+        
+        "player_class": "Cleric",
+        "hit dice": 8,
+        "starting_wealth": "5 d 4 * 10 g.p."
+    },
+    {
+       
+        "player_class": "Druid",
+        "hit dice": 8,
+        "starting_wealth": "2 d 4 * 10 g.p."
+    },
+    {
+       
+        "player_class": "Fighter",
+        "hit dice": 10,
+        "starting_wealth": "5 d 4 * 10 g.p."
+    },
+    {
+        
+        "player_class": "Monk",
+        "hit dice": 8,
+        "starting_wealth": "5 d 4 * 1 g.p. "
+    },
+    {
+        
+        "player_class": "Paladin",
+        "hit dice": 10,
+        "starting_wealth": "5 d 4 * 10 g.p."
+    },
+    {
+        
+        "player_class": "Ranger",
+        "hit dice": 10,
+        "starting_wealth": "5 d 4 * 10 g.p."
+    },
+    {
+       
+        "player_class": "Rogue",
+        "hit dice": 8,
+        "starting_wealth": "4 d 4 * 10 g.p."
+    },
+    {
+        
+        "player_class": "Sorcerer",
+        "hit dice": 6,
+        "starting_wealth": "3 d 4 * 10 g.p."
+    },
+    {
+        
+        "player_class": "Warlock",
+        "hit dice": 8,
+        "starting_wealth": "4 d 4 * 10 g.p."
+    },
+    {
+        
+        "player_class": "Wizard",
+        "hit dice": 6,
+        "starting_wealth": "4 d 4 * 10 g.p."
+    }
+    
+
+]
+    
+}
