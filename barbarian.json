@@ -1,0 +1,144 @@
+{
+  "barbarian_details":[
+ {
+   "Level": 1,
+   "proficiency Bonus": 2,
+   "feature": "Rage;unarmored defense",
+   "rages": "2",
+   "rage damage": 2
+ },
+ {
+   "Level": 2,
+   "proficiency Bonus": 2,
+   "feature": "Reckless attack;danger sense",
+   "rages": "2",
+   "rage damage": 2
+ },
+ {
+   "Level": 3,
+   "proficiency Bonus": 2,
+   "feature": "Primal path",
+   "rages": "3",
+   "rage damage": 2
+ },
+ {
+   "Level": 4,
+   "proficiency Bonus": 2,
+   "feature": "ability score improvement",
+   "rages": "3",
+   "rage damage": 2
+ },
+ {
+   "Level": 5,
+   "proficiency Bonus": 3,
+   "feature": "extra attack;fast movement",
+   "rages": "3",
+   "rage damage": 2
+ },
+ {
+   "Level": 6,
+   "proficiency Bonus": 3,
+   "feature": "path feature",
+   "rages": "4",
+   "rage damage": 2
+ },
+ {
+   "Level": 7,
+   "proficiency Bonus": 3,
+   "feature": "Feral instinct",
+   "rages": "4",
+   "rage damage": 2
+ },
+ {
+   "Level": 8,
+   "proficiency Bonus": 3,
+   "feature": "ability score improvement",
+   "rages": "4",
+   "rage damage": 2
+ },
+ {
+   "Level": 9,
+   "proficiency Bonus": 4,
+   "feature": "Brutal critical (1 die)",
+   "rages": "4",
+   "rage damage": 3
+ },
+ {
+   "Level": 10,
+   "proficiency Bonus": 4,
+   "feature": "path feature",
+   "rages": "4",
+   "rage damage": 3
+ },
+ {
+   "Level": 11,
+   "proficiency Bonus": 4,
+   "feature": "Relentless rage",
+   "rages": "4",
+   "rage damage": 3
+ },
+ {
+   "Level": 12,
+   "proficiency Bonus": 4,
+   "feature": "Ability score improvement",
+   "rages": "5",
+   "rage damage": 3
+ },
+ {
+   "Level": 13,
+   "proficiency Bonus": 5,
+   "feature": "Brutal critical (2 die)",
+   "rages": "5",
+   "rage damage": 3
+ },
+ {
+   "Level": 14,
+   "proficiency Bonus": 5,
+   "feature": "path feature",
+   "rages": "5",
+   "rage damage": 3
+ },
+ {
+   "Level": 15,
+   "proficiency Bonus": 5,
+   "feature": "persistent rage",
+   "rages": "5",
+   "rage damage": 3
+ },
+ {
+   "Level": 16,
+   "proficiency Bonus": 5,
+   "feature": "Ability score improvement",
+   "rages": "5",
+   "rage damage": 4
+ },
+ {
+   "Level": 17,
+   "proficiency Bonus": 6,
+   "feature": "Brutal critical (3 die)",
+   "rages": "6",
+   "rage damage": 4
+ },
+ {
+   "Level": 18,
+   "proficiency Bonus": 6,
+   "feature": "Indomitable might",
+   "rages": "6",
+   "rage damage": 4
+ },
+ {
+   "Level": 19,
+   "proficiency Bonus": 6,
+   "feature": "Ability score improvement",
+   "rages": "6",
+   "rage damage": 4
+ },
+ {
+   "Level": 20,
+   "proficiency Bonus": 6,
+   "feature": "primal champion",
+   "rages": "unlimited",
+   "rage damage": 4
+ }
+]
+}
