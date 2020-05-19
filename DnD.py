@@ -133,11 +133,16 @@ def RollStats():
     return stats
 
 def DisplayClass():
-    pass
+    plist = {}
+    x = 1
+    for key in playerClass:
+        plist[x] = [key]
+        x = x+1
+    print(plist)
 
 def SelectClass():
     DisplayClass()
-    playerClass = input("Enter selected class: ")
+    playerClass = input("Enter number of selected class: ")
     return(playerClass)
 
 
@@ -166,3 +171,5 @@ loadTables()
 p1 = PlayerCharacter('Matt')
 print(p1.stats)
 print(p1.playerClass)
+
+    
