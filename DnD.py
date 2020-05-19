@@ -136,14 +136,48 @@ def DisplayClass():
     plist = {}
     x = 1
     for key in playerClass:
-        plist[x] = [key]
+        plist[x] = key
         x = x+1
+    #print(playerClass)
+    print('{:9}    {:2}'.format('Class', 'Hit dice'))
+    for key in playerClass:
+        print("{:9}      {:2}  {}".format(
+            playerClass[key]['player_class'], playerClass[key]['hit dice'], playerClass[key]['description']))
     print(plist)
+    
 
 def SelectClass():
     DisplayClass()
     playerClass = input("Enter number of selected class: ")
-    return(playerClass)
+    if playerClass == "1":
+        pclass = 'Barbarian'
+    elif playerClass == "2":
+        pclass = 'Bard'
+    elif playerClass == "3":
+        pclass = 'Cleric'
+    elif playerClass == "4":
+        pclass = 'Druid'
+    elif playerClass == "5":
+        pclass = 'Fighter'
+    elif playerClass == "6":
+        pclass = 'Monk'
+    elif playerClass == "7":
+        pclass = 'Paladin'
+    elif playerClass == "8":
+        pclass = 'Ranger'
+    elif playerClass == "9":
+        pclass = 'Rogue'
+    elif playerClass == "10":
+        pclass = 'Sorcerer'
+    elif playerClass == "11":
+        pclass = 'Warlock'
+    elif playerClass == "12":
+        pclass = 'Wizard'
+    else:
+        print("Invalid Number")    
+        
+    
+    return(pclass)
 
 
 

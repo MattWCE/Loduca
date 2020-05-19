@@ -2,72 +2,84 @@
     {
        
         "player_class": "Barbarian",
+        "description":"A fighter defined by rage. Uses light armor, and any weapons. Strength and constitution are prime.",
         "hit dice": 12,
         "starting_wealth":"2 d 4 * 10 g.p."
     },
     {
         
         "player_class": "Bard",
+        "description": "A magic using fighter defined by the arts. A spell caster who uses light armor, swords and simple weapons. Dexterity and charisma are prime.",
         "hit dice": 8,
         "starting_wealth": "5 d 4 * 10 g.p."
     },
     {
         
         "player_class": "Cleric",
+        "description": "A healer and fighter. A spell caster who uses light and medium armor, and simple weapons. Wisdom and charisma are prime.",
         "hit dice": 8,
         "starting_wealth": "5 d 4 * 10 g.p."
     },
     {
        
         "player_class": "Druid",
+        "description": "A nature loving cleric.  A spell caster who uses light and medium armor, andsimple weapons. Wisdom and intelligence are prime.",
         "hit dice": 8,
         "starting_wealth": "2 d 4 * 10 g.p."
     },
     {
        
         "player_class": "Fighter",
+        "description": "A pure soldier that using any weapons and any armor to physically defeat his foe. Strength and constituion are prime.",
         "hit dice": 10,
         "starting_wealth": "5 d 4 * 10 g.p."
     },
     {
         
         "player_class": "Monk",
+        "description": "A master of mind and body that channels his ki to defeat his foe. Uses no armor and only simple weapons. Dexterity and wisdom are prime.",
         "hit dice": 8,
         "starting_wealth": "5 d 4 * 1 g.p. "
     },
     {
         
         "player_class": "Paladin",
+        "description": "A holy fighter wears any armor and uses any weapon while channeling his god's calling. Wisdom and charisma are prime.",
         "hit dice": 10,
         "starting_wealth": "5 d 4 * 10 g.p."
     },
     {
         
         "player_class": "Ranger",
+        "description": "A wilderness fighter on the fringe of society. A spellcasting fighter who uses light to medium armor, any weapons. Dexterity and Strength are prime.",
         "hit dice": 10,
         "starting_wealth": "5 d 4 * 10 g.p."
     },
     {
        
         "player_class": "Rogue",
+        "description": "A thief who prefers using stealth to succeed using light armor, swords and simple weapons. Dexterity and intelligence are prime.",
         "hit dice": 8,
         "starting_wealth": "4 d 4 * 10 g.p."
     },
     {
         
         "player_class": "Sorcerer",
+        "description": "A magic user born with innate magical abilities. Uses no armor and light weapons. Constitution and charisma are prime.",
         "hit dice": 6,
         "starting_wealth": "3 d 4 * 10 g.p."
     },
     {
         
         "player_class": "Warlock",
+        "description": "A magic user who derives his power from a pact with a supernatural being. They fight with light armor and simple weapons and spells. Wisdom and charisma are prime.",
         "hit dice": 8,
         "starting_wealth": "4 d 4 * 10 g.p."
     },
     {
         
         "player_class": "Wizard",
+        "description": "The scholarly magic user . A spell caster who uses no armor and light weapons. Intelligence and wisdom are prime.",
         "hit dice": 6,
         "starting_wealth": "4 d 4 * 10 g.p."
     }
