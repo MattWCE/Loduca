@@ -132,69 +132,53 @@ def RollStats():
     stats.sort(reverse=True)
     return stats
 
-def DisplayClass():
-    plist = {}
-    x = 1
-    for key in playerClass:
-        plist[x] = key
-        x = x+1
-    #print(playerClass)
-    print('{:9}    {:2}'.format('Class', 'Hit dice'))
-    for key in playerClass:
-        print("{:9}      {:2}  {}".format(
-            playerClass[key]['player_class'], playerClass[key]['hit dice'], playerClass[key]['description']))
-    print(plist)
-    
-
-def SelectClass():
-    DisplayClass()
-    playerClass = input("Enter number of selected class: ")
-    if playerClass == "1":
-        pclass = 'Barbarian'
-    elif playerClass == "2":
-        pclass = 'Bard'
-    elif playerClass == "3":
-        pclass = 'Cleric'
-    elif playerClass == "4":
-        pclass = 'Druid'
-    elif playerClass == "5":
-        pclass = 'Fighter'
-    elif playerClass == "6":
-        pclass = 'Monk'
-    elif playerClass == "7":
-        pclass = 'Paladin'
-    elif playerClass == "8":
-        pclass = 'Ranger'
-    elif playerClass == "9":
-        pclass = 'Rogue'
-    elif playerClass == "10":
-        pclass = 'Sorcerer'
-    elif playerClass == "11":
-        pclass = 'Warlock'
-    elif playerClass == "12":
-        pclass = 'Wizard'
-    else:
-        print("Invalid Number")    
-        
-    
-    return(pclass)
-
-
-
 class PlayerCharacter:
     name = ""
     stats = [0]
-    playerClass =''
+    pClass =''
+    hitdice = 0
+    pRace = ''
     #initalize player character with Name
     def __init__(self, name):
         self.name = name
         while mean(self.stats) < 13:
             self.stats = RollStats()
-        self.playerClass=SelectClass()
+        self.pClass = self.SelectClass()
+        self.updateClass()
+        self.pRace = self.SelectRace()
         
+    def SelectClass(self):
+        self.DisplayClass()
+        pClass = ''
+        while pClass not in (playerClass.keys()):
+            pClass = input("Enter selected class: ").capitalize()
+        return(pClass)
+
+    def DisplayClass(self):
+        plist = {}
+        x = 1
+        for key in playerClass:
+            plist[x] = key
+            x = x+1
+        #print(playerClass)
+        print('{:9}    {:2}  {}'.format('Class', 'HD','Description'))
+        for key in playerClass:
+            print("{:9}    {:2}  {}".format(
+                playerClass[key]['player_class'], playerClass[key]['hit dice'], playerClass[key]['description']))
+        print(", ".join(playerClass))
+
+    def updateClass(self):
+        print(self.pClass)
+        self.hitdice = playerClass[self.pClass]['hit dice']
+
+    def SelectRace(self):
+        pRace = ''
+        while pRace not in (Race.keys()):
+            pRace = input("Select Race from list: ").capitalize()
+        return(pRace)
 
 
-
+#-----------------------------------------------------------------------------------------------
 Weapon = {}
 Race = {}
 playerClass = {}
@@ -203,7 +187,14 @@ Barbarian = {}
 Bard= {}
 loadTables()
 p1 = PlayerCharacter('Matt')
+print(p1.name)
 print(p1.stats)
-print(p1.playerClass)
+print(p1.pClass)
+print(p1.hitdice)
+print(p1.pRace)
+
+
+
+
 
     
