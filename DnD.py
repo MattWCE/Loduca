@@ -138,10 +138,17 @@ class PlayerCharacter:
     pClass =''
     hitdice = 0
     pRace = ''
+    str = 0
+    dex = 0 
+    con = 0       
+    cha = 0 
+    wis = 0
+    intel = 0
+    hpBase = 0
     #initalize player character with Name
     def __init__(self, name):
         self.name = name
-        while mean(self.stats) < 13:
+        while mean(self.stats) < 13 or mean(self.stats) > 15:
             self.stats = RollStats()
         self.pClass = self.SelectClass()
         self.updateClass()
@@ -168,8 +175,107 @@ class PlayerCharacter:
         print(", ".join(playerClass))
 
     def updateClass(self):
-        print(self.pClass)
-        self.hitdice = playerClass[self.pClass]['hit dice']
+        if self.pClass == "Barbarian":
+            self.str = self.stats[0]
+            self.dex = self.stats[2]
+            self.con = self.stats[1]
+            self.cha = self.stats[3]
+            self.wis = self.stats[4]
+            self.intel = self.stats[5]
+
+        elif self.pClass == "Bard":
+            self.str = self.stats[4]
+            self.dex = self.stats[1]
+            self.con = self.stats[3]
+            self.cha = self.stats[0]
+            self.wis = self.stats[2]
+            self.intel = self.stats[5]
+            self.hpBase = 8
+        elif self.pClass == "Cleric":
+            self.str = self.stats[2]
+            self.dex = self.stats[3]
+            self.con = self.stats[1]
+            self.cha = self.stats[4]
+            self.wis = self.stats[0]
+            self.intel = self.stats[5]
+            self.hpBase = 8
+        elif self.pClass == "Druid":
+            self.str = self.stats[2]
+            self.dex = self.stats[4]
+            self.con = self.stats[1]
+            self.cha = self.stats[5]
+            self.wis = self.stats[0]
+            self.intel = self.stats[3]
+            self.hpBase = 8
+        elif self.pClass == "Fighter":
+            self.str = self.stats[0]
+            self.dex = self.stats[1]
+            self.con = self.stats[2]
+            self.cha = self.stats[3]
+            self.wis = self.stats[4]
+            self.intel = self.stats[5]
+            self.hpBase = 10
+        elif self.pClass == "Monk":
+            self.str = self.stats[2]
+            self.dex = self.stats[0]
+            self.con = self.stats[3]
+            self.cha = self.stats[4]
+            self.wis = self.stats[1]
+            self.intel = self.stats[5]
+            self.hpBase = 8
+        elif self.pClass == "Paladin":
+            self.str = self.stats[0]
+            self.dex = self.stats[3]
+            self.con = self.stats[2]
+            self.cha = self.stats[1]
+            self.wis = self.stats[4]
+            self.intel = self.stats[5]
+            self.hpBase = 10
+        elif self.pClass == "Ranger":
+            self.str = self.stats[2]
+            self.dex = self.stats[0]
+            self.con = self.stats[3]
+            self.cha = self.stats[4]
+            self.wis = self.stats[1]
+            self.intel = self.stats[5]
+            self.hpBase = 10
+        elif self.pClass == "Rogue":
+            self.str = self.stats[3]
+            self.dex = self.stats[0]
+            self.con = self.stats[2]
+            self.cha = self.stats[4]
+            self.wis = self.stats[5]
+            self.intel = self.stats[1]
+            self.hpBase = 8
+        elif self.pClass == "Sorcerer":
+            self.str = self.stats[2]
+            self.dex = self.stats[4]
+            self.con = self.stats[1]
+            self.cha = self.stats[0]
+            self.wis = self.stats[5]
+            self.intel = self.stats[3]
+            self.hpBase = 6
+        elif self.pClass == "Warlock":
+            self.str = self.stats[2]
+            self.dex = self.stats[4]
+            self.con = self.stats[1]
+            self.cha = self.stats[0]
+            self.wis = self.stats[5]
+            self.intel = self.stats[3]
+            self.hpBase = 8
+        elif self.pClass == "Wizard":
+            self.str = self.stats[4]
+            self.dex = self.stats[2]
+            self.con = self.stats[1]
+            self.cha = self.stats[5]
+            self.wis = self.stats[3]
+            self.intel = self.stats[0]
+            self.hpBase = 6
+        else:
+            print("No such character")
+
+        self.hpBase = (playerClass[self.pClass]['hit dice'])
+        
 
     def SelectRace(self):
         pRace = ''
@@ -187,11 +293,11 @@ Barbarian = {}
 Bard= {}
 loadTables()
 p1 = PlayerCharacter('Matt')
-print(p1.name)
+print('{} is a {} {} with {} hit dice.'.format(p1.name,p1.pRace,p1.pClass,p1.hitdice))
+print('{} has {} strength, {} dexterity, {} wisdom, {} constitution, {} intelligence, {} charisma'.format(p1.name,p1.str, p1.dex, p1.wis, p1.con,p1.intel,p1.cha))
 print(p1.stats)
-print(p1.pClass)
-print(p1.hitdice)
-print(p1.pRace)
+
+
 
 
 
