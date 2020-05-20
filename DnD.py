@@ -148,6 +148,7 @@ class PlayerCharacter:
     DarkVision = 0
     height = 0
     weight = 0
+    langauges = []
     #initalize player character with Name
     def __init__(self, name):
         self.name = name
@@ -302,7 +303,17 @@ class PlayerCharacter:
         self.con = self.con +(Race[self.pRace]['conBonus'])
         self.intel = self.intel +(Race[self.pRace]['intBonus'])
         self.cha = self.cha + (Race[self.pRace]['chaBonus'])
-    
+    def UpdateLanguages(self):
+        l1 = (Race[self.pRace]["languages"]).split()
+        for item in l1:
+            if item not "+1":
+                self.langauges.append(item)
+            else:
+                SelectLanguage()
+
+        print(l1)
+
+
     def UpdateRaceFeatures(self):
         #calc height
         h1 = (Race[self.pRace]['height']).split()
@@ -318,11 +329,10 @@ class PlayerCharacter:
         self.DarkVision = (Race[self.pRace]["DarkVision"])
         wp1 = (Race[self.pRace]["weaponproficiency"])
         sa1 = (Race[self.pRace]["specialAbilities"])
-        l1 = (Race[self.pRace]["languages"])
+        self.UpdateLanguages()
         t1 = (Race[self.pRace]["toolProficiency"])
         sp1 = (Race[self.pRace]["special proficiency"])
-        print(Race[self.pRace]["speed"])
-        print(self.speed)
+        
 
 #-----------------------------------------------------------------------------------------------
 Weapon = {}

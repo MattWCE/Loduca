@@ -1,0 +1,69 @@
+{"languages":[
+    {
+        "type": "Standard",
+        "language":"Common",
+    },
+    {
+        "type": "Standard",
+        "language": "Dwarvish",
+    },
+    {
+        "type": "Standard",
+        "language": "Ellvish",
+    },
+    {
+        "type": "Standard",
+        "language": "Giant",
+    },
+    {
+        "type": "Standard",
+        "language": "Gnomish",
+    },
+    {
+        "type": "Standard",
+        "language": "Goblin",
+    },    
+    {
+        "type": "Standard",
+        "language": "Halfing",
+    },
+    {
+        "type": "Standard",
+        "language": "Orc",
+    },
+    {
+        "type": "Exotic",
+        "language": "Abyssal",
+    },
+    {
+        "type": "Exotic",
+        "language": "Celestial",
+    },    
+    {
+        "type": "Exotic",
+        "language": "Draconic",
+    },
+    {
+        "type": "Exotic",
+        "language": "Deep Speech",
+    },
+    {
+        "type": "Exotic",
+        "language": "Infernal",
+    },
+    {
+        "type": "Exotic",
+        "language": "Primordial",
+    },
+    {
+        "type": "Exotic",
+        "language": "Sylvan",
+    },
+    {
+        "type": "Exotic",
+        "language": "Undercommon",
+    }
+
+]
+    
+}
