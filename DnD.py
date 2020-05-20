@@ -15,6 +15,7 @@ def loadTables():
     loadGear()
     loadBarbarian()
     loadBard()
+    loadLanguages()
 
 def loadClass():
     #Load palyer class data from JSON
@@ -113,6 +114,21 @@ def loadBard():
     # Closing file
     f.close()
     
+def loadLanguages():
+    #load languages data from JSON
+    # Opening JSON file
+    try:
+        f = open('languages.json',)
+    except IOError as err:
+        print("Error: ", err)
+
+    # returns JSON object as a dictionary
+    data = json.load(f)
+    global Languages
+    for i in data['languages']:
+        languages[(i['language'])] = i
+    # Closing file
+    f.close()
 def d(side):
     #roll die. side is the number of sides on the dice
     try:
@@ -306,10 +322,10 @@ class PlayerCharacter:
     def UpdateLanguages(self):
         l1 = (Race[self.pRace]["languages"]).split()
         for item in l1:
-            if item not "+1":
-                self.langauges.append(item)
-            else:
+            if item == "+1":
                 SelectLanguage()
+            else:
+                self.langauges.append(item)
 
         print(l1)
 
@@ -335,6 +351,7 @@ class PlayerCharacter:
         
 
 #-----------------------------------------------------------------------------------------------
+Languages={}
 Weapon = {}
 Race = {}
 playerClass = {}
