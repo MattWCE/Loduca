@@ -124,11 +124,11 @@ def loadLanguages():
 
     # returns JSON object as a dictionary
     data = json.load(f)
-    global Languages
-    for i in data['languages']:
-        languages[(i['language'])] = i
+    #global Languages
+    #for i in data['languages']:
+    #    languages[(i['language'])] = i
     # Closing file
-    f.close()
+    #f.close()
 def d(side):
     #roll die. side is the number of sides on the dice
     try:
