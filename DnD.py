@@ -137,7 +137,6 @@ class PlayerCharacter:
     stats = [0]
     pClass =''
     hitdice = 0
-    pRace = ''
     str = 0
     dex = 0 
     con = 0       
@@ -145,6 +144,10 @@ class PlayerCharacter:
     wis = 0
     intel = 0
     hpBase = 0
+    speed = 0
+    DarkVision = 0
+    height = 0
+    weight = 0
     #initalize player character with Name
     def __init__(self, name):
         self.name = name
@@ -153,7 +156,8 @@ class PlayerCharacter:
         self.pClass = self.SelectClass()
         self.updateClass()
         self.pRace = self.SelectRace()
-        
+        self.UpdateStats()
+        self.UpdateRaceFeatures()
     def SelectClass(self):
         self.DisplayClass()
         pClass = ''
@@ -167,7 +171,6 @@ class PlayerCharacter:
         for key in playerClass:
             plist[x] = key
             x = x+1
-        #print(playerClass)
         print('{:9}    {:2}  {}'.format('Class', 'HD','Description'))
         for key in playerClass:
             print("{:9}    {:2}  {}".format(
@@ -274,15 +277,52 @@ class PlayerCharacter:
         else:
             print("No such character")
 
-        self.hpBase = (playerClass[self.pClass]['hit dice'])
+        self.hitdice = (playerClass[self.pClass]['hit dice'])
+        
+    def displayRace(self):
+        print('{:9}    {:2} '.format('Race',  'Description'))
+        for key in Race:
+            print("{:9}    {:2} ".format(
+                Race[key]['Race'],  Race[key]['description']))
+        print('-------------------------------------------------------------------------------------------------------------')
+        print(", ".join(Race))
         
 
     def SelectRace(self):
+        self.displayRace()
         pRace = ''
         while pRace not in (Race.keys()):
             pRace = input("Select Race from list: ").capitalize()
         return(pRace)
 
+    def UpdateStats(self):
+        self.str = self.str +(Race[self.pRace]['strBonus'])
+        self.dex = self.dex +(Race[self.pRace]['dexBonus'])
+        self.wis = self.wis +(Race[self.pRace]['wisBonus'])
+        self.con = self.con +(Race[self.pRace]['conBonus'])
+        self.intel = self.intel +(Race[self.pRace]['intBonus'])
+        self.cha = self.cha + (Race[self.pRace]['chaBonus'])
+    
+    def UpdateRaceFeatures(self):
+        #calc height
+        h1 = (Race[self.pRace]['height']).split()
+        self.height = (int(h1[0]) + int(h1[2]) * d(int(h1[4])))
+        #calc weight
+        w1 = (Race[self.pRace]['weight']).split()
+        self.weight = (int(w1[0]) + int(w1[2]) * d(int(w1[4])))
+        #calc age
+        a1 = (Race[self.pRace]["age"]).split()
+        self.age = (int(a1[0]) + int(a1[2]) * d(int(a1[4])))
+        
+        self.speed = (Race[self.pRace]["speed"])
+        self.DarkVision = (Race[self.pRace]["DarkVision"])
+        wp1 = (Race[self.pRace]["weaponproficiency"])
+        sa1 = (Race[self.pRace]["specialAbilities"])
+        l1 = (Race[self.pRace]["languages"])
+        t1 = (Race[self.pRace]["toolProficiency"])
+        sp1 = (Race[self.pRace]["special proficiency"])
+        print(Race[self.pRace]["speed"])
+        print(self.speed)
 
 #-----------------------------------------------------------------------------------------------
 Weapon = {}
@@ -293,8 +333,10 @@ Barbarian = {}
 Bard= {}
 loadTables()
 p1 = PlayerCharacter('Matt')
-print('{} is a {} {} with {} hit dice.'.format(p1.name,p1.pRace,p1.pClass,p1.hitdice))
+print('{} is a {} {} with {}-sided hit dice.'.format(p1.name,p1.pRace,p1.pClass,p1.hitdice))
 print('{} has {} strength, {} dexterity, {} wisdom, {} constitution, {} intelligence, {} charisma'.format(p1.name,p1.str, p1.dex, p1.wis, p1.con,p1.intel,p1.cha))
+print('I can see {} feet in the dark and run {} feet per turn.'.format(p1.DarkVision,p1.speed))
+print('I am {} years old, {} inches tall and weigh {} pounds.'.format(p1.age, p1.height, p1.weight))
 print(p1.stats)
 
 

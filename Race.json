@@ -2,6 +2,7 @@
   {
     "id": 1,
     "Race": "Human",
+    "description":"The key word for humans is variety. The dominant humaniod race, each has his own specialty, but not everyone has the same specialties. ",
     "strBonus": 1,
     "dexBonus": 1,
     "conBonus": 1,
@@ -22,6 +23,7 @@
   {
     "id": 2,
     "Race": "Dwarf",
+    "description": "Clan-centric, long lived, short stout smiths with a natural resistance to poison and a proficiency with axes and hammers.",
     "strBonus": 0,
     "dexBonus": 0,
     "conBonus": 2,
@@ -42,6 +44,7 @@
   {
     "id": 3,
     "Race": "Mountain dwarf",
+    "description": "Same as the dwarf, but stronger and hardier. Also proficient with light and medium armor.",
     "strBonus": 2,
     "dexBonus": 0,
     "conBonus": 2,
@@ -62,6 +65,7 @@
   {
     "id": 4,
     "Race": "Hill dwarf",
+    "description": "Same as regular dwarf but with keener senses and intuition and tougher, too.",
     "strBonus": 0,
     "dexBonus": 0,
     "conBonus": 2,
@@ -82,6 +86,7 @@
   {
     "id": 5,
     "Race": "Elf",
+    "description": "Magical race with unearthly grace. Tall, slender, nimble and longer lived than even the dwarves. They have keen senses and reesistant to sleep and charm",
     "strBonus": 0,
     "dexBonus": 2,
     "conBonus": 0,
@@ -102,6 +107,7 @@
   {
     "id": 6,
     "Race": "High elf",
+    "description": "Same as a regular elf, but smarter with proficiencies in swords and bows. ",
     "strBonus": 0,
     "dexBonus": 2,
     "conBonus": 0,
@@ -122,6 +128,7 @@
   {
     "id": 7,
     "Race": "Wood elf",
+    "description": "Same as high elf but more wise than smart, and can disappear in the woods.",
     "strBonus": 0,
     "dexBonus": 2,
     "conBonus": 0,
@@ -142,6 +149,7 @@
   {
     "id": 8,
     "Race": "Dark elf",
+    "description": "Spawned from evil elves but not necesarily evil. Extermely sensitive to sunlight. Proficient with Drow weapons and Drow magic.",
     "strBonus": 0,
     "dexBonus": 2,
     "conBonus": 0,
@@ -162,6 +170,7 @@
   {
     "id": 9,
     "Race": "Gnome",
+    "description": "Smart and long lived, they like the arts, gadget and gizmos, and are cunning folk. ",
     "strBonus": 0,
     "dexBonus": 0,
     "conBonus": 0,
@@ -182,6 +191,7 @@
   {
     "id": 10,
     "Race": "Forest gnome",
+    "description": "Same as regular regular gnomes, but more agile, with a penchant for illusion and speaking with small forest animals. ",
     "strBonus": 0,
     "dexBonus": 1,
     "conBonus": 0,
@@ -202,6 +212,7 @@
   {
     "id": 11,
     "Race": "Rock gnome",
+    "description": "Same as regular regular gnomes, but tougher and more knowledgableabout arcana, and they love to tinker. ",
     "strBonus": 0,
     "dexBonus": 0,
     "conBonus": 1,
@@ -222,6 +233,7 @@
   {
     "id": 12,
     "Race": "Halfling",
+    "description": "Small, practical, nimble brave and lucky and live to about twice the age of humans. ",
     "strBonus": 0,
     "dexBonus": 2,
     "conBonus": 0,
@@ -242,6 +254,7 @@
   {
     "id": 13,
     "Race": "Stout halfling",
+    "description": "Same as regular halflings, but like dwarves, are stout and resistant to poison. ",
     "strBonus": 0,
     "dexBonus": 2,
     "conBonus": 1,
@@ -262,6 +275,7 @@
   {
     "id": 14,
     "Race": "Light foot halfling",
+    "description": "Same as regular halflings, but stealthy and charismatic. ",
     "strBonus": 0,
     "dexBonus": 2,
     "conBonus": 0,
@@ -282,6 +296,7 @@
   {
     "id": 15,
     "Race": "Tiefling",
+    "description": "There devish anscestry makes them feared. They are suspicious and self reliant. Intelligent, charismatic with fire resistance and innate magic.  ",
     "strBonus": 0,
     "dexBonus": 0,
     "conBonus": 0,
@@ -302,6 +317,7 @@
   {
     "id": 16,
     "Race": "Half elf",
+    "description": "Charismatic diplomats.Like humans they embrace variety, and like their elven ancesters, they are resistant to charm and sleep.  ",
     "strBonus": 0,
     "dexBonus": 0,
     "conBonus": 0,
@@ -322,6 +338,7 @@
   {
     "id": 17,
     "Race": "Dragonborn",
+    "description": "Proud and haughty, strong and charismatic, they resemble their dragon ancesters, with breath weapon and resistance of that ancestry.  ",
     "strBonus": 2,
     "dexBonus": 0,
     "conBonus": 0,
@@ -342,6 +359,7 @@
   {
     "id": 18,
     "Race": "Half orc",
+    "description": "Generally ostracized by civilized races, they are strong, relentless, menacing, savage warriors. They are tough, but generally live shorter lives. ",
     "strBonus": 2,
     "dexBonus": 0,
     "conBonus": 1,
