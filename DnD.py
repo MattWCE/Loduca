@@ -124,17 +124,26 @@ def loadLanguages():
 
     # returns JSON object as a dictionary
     data = json.load(f)
+    
     global Languages
     for i in data['languages']:
-        languages[(i['language'])] = i
+        Languages[(i['language'])] = i
     # Closing file
     f.close()
+
 def d(side):
     #roll die. side is the number of sides on the dice
     try:
         return random.randrange(1, side + 1)
     except:
         logging.warning("input not > 0")
+
+def SelectLanguage(langs):
+    l1=''
+    print(Languages.keys())
+    while l1 not in Languages.keys():
+        l1 = input('Select a language from the list: ').capitalize()
+    return (l1)
 
 def RollStats():
     #Rolls stats. 4 6 sided dice for each stat, subtracting the lowest dice roll. returns 6 stats.
@@ -147,7 +156,6 @@ def RollStats():
         stat.clear()
     stats.sort(reverse=True)
     return stats
-
 class PlayerCharacter:
     name = ""
     stats = [0]
@@ -303,7 +311,6 @@ class PlayerCharacter:
                 Race[key]['Race'],  Race[key]['description']))
         print('-------------------------------------------------------------------------------------------------------------')
         print(", ".join(Race))
-        
 
     def SelectRace(self):
         self.displayRace()
@@ -320,15 +327,15 @@ class PlayerCharacter:
         self.intel = self.intel +(Race[self.pRace]['intBonus'])
         self.cha = self.cha + (Race[self.pRace]['chaBonus'])
     def UpdateLanguages(self):
-        l1 = (Race[self.pRace]["languages"]).split()
-        for item in l1:
-            if item == "+1":
-                SelectLanguage()
-            else:
-                self.langauges.append(item)
-
+        l1 = (Race[self.pRace]["languages"]).split(';')
         print(l1)
 
+        for item in l1:
+            if item == "+1":
+                print("Selecting language")
+                self.langauges.append(SelectLanguage(self.langauges))
+            else:
+                self.langauges.append(item)
 
     def UpdateRaceFeatures(self):
         #calc height
@@ -348,8 +355,7 @@ class PlayerCharacter:
         self.UpdateLanguages()
         t1 = (Race[self.pRace]["toolProficiency"])
         sp1 = (Race[self.pRace]["special proficiency"])
-        
-
+  
 #-----------------------------------------------------------------------------------------------
 Languages={}
 Weapon = {}
@@ -363,8 +369,10 @@ p1 = PlayerCharacter('Matt')
 print('{} is a {} {} with {}-sided hit dice.'.format(p1.name,p1.pRace,p1.pClass,p1.hitdice))
 print('{} has {} strength, {} dexterity, {} wisdom, {} constitution, {} intelligence, {} charisma'.format(p1.name,p1.str, p1.dex, p1.wis, p1.con,p1.intel,p1.cha))
 print('I can see {} feet in the dark and run {} feet per turn.'.format(p1.DarkVision,p1.speed))
-print('I am {} years old, {} inches tall and weigh {} pounds.'.format(p1.age, p1.height, p1.weight))
+print('{} is {} years old, {} inches tall and weigh {} pounds.'.format(p1.name,p1.age, p1.height, p1.weight))
+print('{} speaks {} .'.format(p1.name, p1.langauges))
 print(p1.stats)
+
 
 
 
