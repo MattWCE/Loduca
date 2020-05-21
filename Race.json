@@ -38,7 +38,7 @@
     "weaponproficiency": "battleaxe;handaxe;throwing hammer;warhammer",
     "specialAbilities": "stone cunning;Dwarven Resilience",
     "languages": "Common;Dwarvish",
-    "toolProficiency": "1;smith tools;brewer's supplies;masons tools",
+    "toolProficiency": "1;3;smith tools;brewer supplies;mason tools",
     "special proficiency": ""
   },
   {
@@ -59,7 +59,7 @@
     "weaponproficiency": "battleaxe;handaxe;throwing hammer;warhammer;light armor;medium armor",
     "specialAbilities": "stone cunning;Dwarven Resilience",
     "languages": "Common;Dwarvish",
-    "toolProficiency": "1;smith tools;brewer's supplies;masons tools",
+    "toolProficiency": "1;3;smith tools;brewer supplies;mason tools",
     "special proficiency": ""
   },
   {
@@ -80,7 +80,7 @@
     "weaponproficiency": "battleaxe;handaxe;throwing hammer;warhammer",
     "specialAbilities": "stone cunning;Dwarven Resilience",
     "languages": "Common;Dwarvish",
-    "toolProficiency": "1-3;smith tools;brewer's supplies;masons tools",
+    "toolProficiency": "1;3;smith tools;brewer supplies;mason tools",
     "special proficiency": ""
   },
   {

@@ -390,11 +390,15 @@ class PlayerCharacter:
         self.UpdateLanguages()
 
         t1 = (Race[self.pRace]["toolProficiency"]).split(';')
-        for item in t1:
-            if t1[0].isnumeric(): 
-                        print("it is a number")
-            else:
 
+        if t1[0].isnumeric(): 
+            x=int(t1[0])
+            y=1+int(t1[1])
+            print(t1[2:y+1])
+            self.UpdateToolProficiency(input("Select {} from the list: ".format(x)))
+
+                        
+            
 
         sp1 = (Race[self.pRace]["special proficiency"])
   
@@ -416,6 +420,7 @@ print('{} speaks {} .'.format(p1.name, p1.langauges))
 print(p1.stats)
 print(p1.weaponProf)
 print(p1.specialAbility)
+print(p1.toolprof)
 
 
 
