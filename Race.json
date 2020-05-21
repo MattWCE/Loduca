@@ -205,7 +205,7 @@
     "DarkVision": 60,
     "weaponproficiency": "",
     "specialAbilities": "Gnome cunning",
-    "languages": "gnomish;common",
+    "languages": "Gnomish;Common",
     "toolProficiency": "",
     "special proficiency": "minor illusion cantrip;speak with small beast"
   },
@@ -373,7 +373,7 @@
     "DarkVision": 60,
     "weaponproficiency": "",
     "specialAbilities": "intimidation; relentless endurance",
-    "languages": "common;orc",
+    "languages": "Common;Orc",
     "toolProficiency": "",
     "special proficiency": ""
   }

@@ -173,6 +173,10 @@ class PlayerCharacter:
     height = 0
     weight = 0
     langauges = []
+    weaponProf=[]
+    age =0
+    specialAbility = []
+    toolprof = []
     #initalize player character with Name
     def __init__(self, name):
         self.name = name
@@ -326,6 +330,13 @@ class PlayerCharacter:
         self.con = self.con +(Race[self.pRace]['conBonus'])
         self.intel = self.intel +(Race[self.pRace]['intBonus'])
         self.cha = self.cha + (Race[self.pRace]['chaBonus'])
+    
+    def UpdateSpeed(self, value):
+        self.speed = self.speed + value
+    
+    def UpdateAge(self,value):
+        self.age = self.age + value
+    
     def UpdateLanguages(self):
         l1 = (Race[self.pRace]["languages"]).split(';')
         print(l1)
@@ -337,23 +348,54 @@ class PlayerCharacter:
             else:
                 self.langauges.append(item)
 
+    def UpdateWeaponProficiency(self, item):
+        self.weaponProf.append(item)
+
+    def UpdateSpecialAbilities(self,value):
+        self.specialAbility.append(value)
+
+    def UpdateToolProficiency(self,value):
+        self.toolprof.append(value)
+
     def UpdateRaceFeatures(self):
-        #calc height
+        #calc height One time update
         h1 = (Race[self.pRace]['height']).split()
         self.height = (int(h1[0]) + int(h1[2]) * d(int(h1[4])))
-        #calc weight
+
+        #update speed can update with levels or magic.
+        self.UpdateSpeed((Race[self.pRace]["speed"]))
+
+        #calc weight one time update
         w1 = (Race[self.pRace]['weight']).split()
         self.weight = (int(w1[0]) + int(w1[2]) * d(int(w1[4])))
-        #calc age
+
+        #calc age  Character ages
         a1 = (Race[self.pRace]["age"]).split()
-        self.age = (int(a1[0]) + int(a1[2]) * d(int(a1[4])))
-        
-        self.speed = (Race[self.pRace]["speed"])
+        self.UpdateAge((int(a1[0]) + int(a1[2]) * d(int(a1[4]))))
+
+
+        #update Darkvision One time thing for now.
         self.DarkVision = (Race[self.pRace]["DarkVision"])
-        wp1 = (Race[self.pRace]["weaponproficiency"])
-        sa1 = (Race[self.pRace]["specialAbilities"])
+
+        #update Weapon proficiency
+        wp1 = (Race[self.pRace]["weaponproficiency"]).split(';')
+        print(wp1)
+        for item in wp1:
+            self.UpdateWeaponProficiency(item)
+        #Update special racial abilities
+        sa1 = (Race[self.pRace]["specialAbilities"]).split(';')
+        for item in sa1:
+            self.UpdateSpecialAbilities(item)
+        #update languages
         self.UpdateLanguages()
-        t1 = (Race[self.pRace]["toolProficiency"])
+
+        t1 = (Race[self.pRace]["toolProficiency"]).split(';')
+        for item in t1:
+            if t1[0].isnumeric(): 
+                        print("it is a number")
+            else:
+
+
         sp1 = (Race[self.pRace]["special proficiency"])
   
 #-----------------------------------------------------------------------------------------------
@@ -372,6 +414,8 @@ print('I can see {} feet in the dark and run {} feet per turn.'.format(p1.DarkVi
 print('{} is {} years old, {} inches tall and weigh {} pounds.'.format(p1.name,p1.age, p1.height, p1.weight))
 print('{} speaks {} .'.format(p1.name, p1.langauges))
 print(p1.stats)
+print(p1.weaponProf)
+print(p1.specialAbility)
 
 
 
